@@ -30,9 +30,9 @@ guardarResultado ---> API
 
 */
 
-int menu(){
+char menu(){
 
-    char opc;
+    int opc='Z';
 
     do{
     printf("DoCe\n\n"
@@ -40,11 +40,11 @@ int menu(){
            "[B] Ver ranking\n"
            "[C] Salir\n\n"
            "Seleccione una opcion: ");
-    fflush(stdin);
     opc = getchar();
+    while( getchar()!='\n'); //Igual, si le mandas EOF se rompe...
     opc = toupper(opc);
     system("cls");
-    }while(opc<'A' || opc>'C');
+    }while( opc<'A' || opc>'C' );
 
     return opc;
 }

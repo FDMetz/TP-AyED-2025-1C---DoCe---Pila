@@ -55,7 +55,7 @@ typedef struct{
     unsigned puntaje;
 }tIA;
 
-int menu();
+char menu();
 void jugar();
 void partida(unsigned dificultad, const char* nombreJugador);
 void mezclarMazo(tPilaEstatica* mazo);
